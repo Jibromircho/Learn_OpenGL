@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/OpenGLProject.dir/src/main.cpp.o CMakeFiles/OpenGLProject.dir/include/glad.c.o -o OpenGLProject  -lglfw -ldl -lGL 
