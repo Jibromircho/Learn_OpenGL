@@ -1,12 +1,12 @@
 [
 {
-  "directory": "/home/didi-desktop/Code/Learn_OpenGL/build",
-  "command": "/usr/bin/c++  -I/home/didi-desktop/Code/Learn_OpenGL/include -g -o CMakeFiles/OpenGLProject.dir/src/main.cpp.o -c /home/didi-desktop/Code/Learn_OpenGL/src/main.cpp",
-  "file": "/home/didi-desktop/Code/Learn_OpenGL/src/main.cpp"
+  "directory": "/home/didi/code/Learn_OpenGL/build",
+  "command": "/usr/bin/c++  -I/home/didi/code/Learn_OpenGL/include -g -o CMakeFiles/OpenGLProject.dir/src/main.cpp.o -c /home/didi/code/Learn_OpenGL/src/main.cpp",
+  "file": "/home/didi/code/Learn_OpenGL/src/main.cpp"
 },
 {
-  "directory": "/home/didi-desktop/Code/Learn_OpenGL/build",
-  "command": "/usr/bin/cc  -I/home/didi-desktop/Code/Learn_OpenGL/include -g -o CMakeFiles/OpenGLProject.dir/include/glad.c.o -c /home/didi-desktop/Code/Learn_OpenGL/include/glad.c",
-  "file": "/home/didi-desktop/Code/Learn_OpenGL/include/glad.c"
+  "directory": "/home/didi/code/Learn_OpenGL/build",
+  "command": "/usr/bin/gcc-12  -I/home/didi/code/Learn_OpenGL/include -g -o CMakeFiles/OpenGLProject.dir/include/glad.c.o -c /home/didi/code/Learn_OpenGL/include/glad.c",
+  "file": "/home/didi/code/Learn_OpenGL/include/glad.c"
 }
 ]

@@ -1,7 +1,6 @@
 CMakeFiles/OpenGLProject.dir/src/main.cpp.o: \
- /home/didi-desktop/Code/Learn_OpenGL/src/main.cpp \
- /usr/include/stdc-predef.h \
- /home/didi-desktop/Code/Learn_OpenGL/include/config.h \
+ /home/didi/code/Learn_OpenGL/src/main.cpp /usr/include/stdc-predef.h \
+ /home/didi/code/Learn_OpenGL/include/config.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -148,7 +147,7 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/didi-desktop/Code/Learn_OpenGL/include/glad/glad.h \
+ /home/didi/code/Learn_OpenGL/include/glad/glad.h \
  /usr/include/KHR/khrplatform.h /usr/include/GLFW/glfw3.h \
  /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \

@@ -13,8 +13,8 @@ CMakeFiles/OpenGLProject.dir/include/glad.c.o: ../include/glad.c \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/12/include/stdarg.h \
   /usr/include/x86_64-linux-gnu/bits/types.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/time64.h \
@@ -61,7 +61,7 @@ CMakeFiles/OpenGLProject.dir/include/glad.c.o: ../include/glad.c \
   /usr/include/strings.h \
   ../include/glad/glad.h \
   /usr/include/KHR/khrplatform.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
+  /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
@@ -368,6 +368,12 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
+/usr/include/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
+
 ../include/glad/glad.h:
 
 /usr/include/c++/11/bits/basic_ios.h:
@@ -416,11 +422,11 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/endian.h:
 
-/usr/include/x86_64-linux-gnu/sys/types.h:
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/features-time64.h:
-
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
 /usr/include/c++/11/bits/codecvt.h:
 
@@ -439,12 +445,6 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/asm/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
-/usr/include/alloca.h:
-
-/usr/include/c++/11/string:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
 /usr/include/stdio.h:
 
@@ -468,7 +468,11 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/12/include/stdarg.h:
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
@@ -477,6 +481,12 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /usr/include/c++/11/bits/localefwd.h:
+
+/usr/include/alloca.h:
+
+/usr/include/c++/11/string:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
 /usr/include/features.h:
 
@@ -502,10 +512,6 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
-/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 /usr/include/stdlib.h:
@@ -523,6 +529,8 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/bits/functexcept.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h:
 
 /usr/include/stdint.h:
 
@@ -586,6 +594,8 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/nested_exception.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
+
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
@@ -600,8 +610,6 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/11/bits/cxxabi_init_exception.h:
 
-/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
-
 /usr/include/c++/11/typeinfo:
 
 /usr/include/c++/11/bits/string_view.tcc:
@@ -615,6 +623,8 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/11/type_traits:
 
 /usr/include/asm-generic/errno-base.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h:
 
 /usr/include/c++/11/bits/char_traits.h:
 
@@ -656,8 +666,6 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
-
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
 
 /usr/include/c++/11/bits/cpp_type_traits.h:
@@ -665,5 +673,3 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/pthread.h:
 
 /usr/include/sched.h:
-
-/usr/include/time.h:

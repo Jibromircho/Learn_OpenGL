@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/didi-desktop/Code/Learn_OpenGL/build"
+			"value" : "/home/didi/code/Learn_OpenGL/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -286,8 +286,8 @@
 					"value" : "C compiler"
 				}
 			],
-			"type" : "FILEPATH",
-			"value" : "/usr/bin/cc"
+			"type" : "STRING",
+			"value" : "/usr/bin/gcc-12"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_AR",
@@ -303,7 +303,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ar-11"
+			"value" : "/usr/bin/gcc-ar-12"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_RANLIB",
@@ -319,7 +319,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ranlib-11"
+			"value" : "/usr/bin/gcc-ranlib-12"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -591,7 +591,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/didi-desktop/Code/Learn_OpenGL"
+			"value" : "/home/didi/code/Learn_OpenGL"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1327,7 +1327,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/didi-desktop/Code/Learn_OpenGL/build"
+			"value" : "/home/didi/code/Learn_OpenGL/build"
 		},
 		{
 			"name" : "OpenGLProject_IS_TOP_LEVEL",
@@ -1351,7 +1351,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/didi-desktop/Code/Learn_OpenGL"
+			"value" : "/home/didi/code/Learn_OpenGL"
 		}
 	],
 	"kind" : "cache",

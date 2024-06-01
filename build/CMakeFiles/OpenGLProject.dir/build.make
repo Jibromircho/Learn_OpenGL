@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/didi-desktop/Code/Learn_OpenGL
+CMAKE_SOURCE_DIR = /home/didi/code/Learn_OpenGL
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/didi-desktop/Code/Learn_OpenGL/build
+CMAKE_BINARY_DIR = /home/didi/code/Learn_OpenGL/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/OpenGLProject.dir/depend.make
@@ -72,30 +72,30 @@ include CMakeFiles/OpenGLProject.dir/flags.make
 CMakeFiles/OpenGLProject.dir/src/main.cpp.o: CMakeFiles/OpenGLProject.dir/flags.make
 CMakeFiles/OpenGLProject.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/OpenGLProject.dir/src/main.cpp.o: CMakeFiles/OpenGLProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/didi-desktop/Code/Learn_OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OpenGLProject.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGLProject.dir/src/main.cpp.o -MF CMakeFiles/OpenGLProject.dir/src/main.cpp.o.d -o CMakeFiles/OpenGLProject.dir/src/main.cpp.o -c /home/didi-desktop/Code/Learn_OpenGL/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/didi/code/Learn_OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OpenGLProject.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGLProject.dir/src/main.cpp.o -MF CMakeFiles/OpenGLProject.dir/src/main.cpp.o.d -o CMakeFiles/OpenGLProject.dir/src/main.cpp.o -c /home/didi/code/Learn_OpenGL/src/main.cpp
 
 CMakeFiles/OpenGLProject.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLProject.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/didi-desktop/Code/Learn_OpenGL/src/main.cpp > CMakeFiles/OpenGLProject.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/didi/code/Learn_OpenGL/src/main.cpp > CMakeFiles/OpenGLProject.dir/src/main.cpp.i
 
 CMakeFiles/OpenGLProject.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLProject.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/didi-desktop/Code/Learn_OpenGL/src/main.cpp -o CMakeFiles/OpenGLProject.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/didi/code/Learn_OpenGL/src/main.cpp -o CMakeFiles/OpenGLProject.dir/src/main.cpp.s
 
 CMakeFiles/OpenGLProject.dir/include/glad.c.o: CMakeFiles/OpenGLProject.dir/flags.make
 CMakeFiles/OpenGLProject.dir/include/glad.c.o: ../include/glad.c
 CMakeFiles/OpenGLProject.dir/include/glad.c.o: CMakeFiles/OpenGLProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/didi-desktop/Code/Learn_OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/OpenGLProject.dir/include/glad.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/OpenGLProject.dir/include/glad.c.o -MF CMakeFiles/OpenGLProject.dir/include/glad.c.o.d -o CMakeFiles/OpenGLProject.dir/include/glad.c.o -c /home/didi-desktop/Code/Learn_OpenGL/include/glad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/didi/code/Learn_OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/OpenGLProject.dir/include/glad.c.o"
+	/usr/bin/gcc-12 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/OpenGLProject.dir/include/glad.c.o -MF CMakeFiles/OpenGLProject.dir/include/glad.c.o.d -o CMakeFiles/OpenGLProject.dir/include/glad.c.o -c /home/didi/code/Learn_OpenGL/include/glad.c
 
 CMakeFiles/OpenGLProject.dir/include/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/OpenGLProject.dir/include/glad.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/didi-desktop/Code/Learn_OpenGL/include/glad.c > CMakeFiles/OpenGLProject.dir/include/glad.c.i
+	/usr/bin/gcc-12 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/didi/code/Learn_OpenGL/include/glad.c > CMakeFiles/OpenGLProject.dir/include/glad.c.i
 
 CMakeFiles/OpenGLProject.dir/include/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/OpenGLProject.dir/include/glad.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/didi-desktop/Code/Learn_OpenGL/include/glad.c -o CMakeFiles/OpenGLProject.dir/include/glad.c.s
+	/usr/bin/gcc-12 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/didi/code/Learn_OpenGL/include/glad.c -o CMakeFiles/OpenGLProject.dir/include/glad.c.s
 
 # Object files for target OpenGLProject
 OpenGLProject_OBJECTS = \
@@ -109,7 +109,7 @@ OpenGLProject: CMakeFiles/OpenGLProject.dir/src/main.cpp.o
 OpenGLProject: CMakeFiles/OpenGLProject.dir/include/glad.c.o
 OpenGLProject: CMakeFiles/OpenGLProject.dir/build.make
 OpenGLProject: CMakeFiles/OpenGLProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/didi-desktop/Code/Learn_OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable OpenGLProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/didi/code/Learn_OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable OpenGLProject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OpenGLProject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +121,6 @@ CMakeFiles/OpenGLProject.dir/clean:
 .PHONY : CMakeFiles/OpenGLProject.dir/clean
 
 CMakeFiles/OpenGLProject.dir/depend:
-	cd /home/didi-desktop/Code/Learn_OpenGL/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/didi-desktop/Code/Learn_OpenGL /home/didi-desktop/Code/Learn_OpenGL /home/didi-desktop/Code/Learn_OpenGL/build /home/didi-desktop/Code/Learn_OpenGL/build /home/didi-desktop/Code/Learn_OpenGL/build/CMakeFiles/OpenGLProject.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/didi/code/Learn_OpenGL/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/didi/code/Learn_OpenGL /home/didi/code/Learn_OpenGL /home/didi/code/Learn_OpenGL/build /home/didi/code/Learn_OpenGL/build /home/didi/code/Learn_OpenGL/build/CMakeFiles/OpenGLProject.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/OpenGLProject.dir/depend
 
