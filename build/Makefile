@@ -153,6 +153,30 @@ include/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/include/glad.c.s
 .PHONY : include/glad.c.s
 
+src/imageLoad.o: src/imageLoad.cpp.o
+.PHONY : src/imageLoad.o
+
+# target to build an object file
+src/imageLoad.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/imageLoad.cpp.o
+.PHONY : src/imageLoad.cpp.o
+
+src/imageLoad.i: src/imageLoad.cpp.i
+.PHONY : src/imageLoad.i
+
+# target to preprocess a source file
+src/imageLoad.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/imageLoad.cpp.i
+.PHONY : src/imageLoad.cpp.i
+
+src/imageLoad.s: src/imageLoad.cpp.s
+.PHONY : src/imageLoad.s
+
+# target to generate assembly for a file
+src/imageLoad.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/imageLoad.cpp.s
+.PHONY : src/imageLoad.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -189,6 +213,9 @@ help:
 	@echo "... include/glad.o"
 	@echo "... include/glad.i"
 	@echo "... include/glad.s"
+	@echo "... src/imageLoad.o"
+	@echo "... src/imageLoad.i"
+	@echo "... src/imageLoad.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

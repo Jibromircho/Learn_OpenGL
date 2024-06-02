@@ -8,5 +8,10 @@
   "directory": "/home/didi-desktop/Code/Learn_OpenGL/build",
   "command": "/usr/bin/cc  -I/home/didi-desktop/Code/Learn_OpenGL/include -g -o CMakeFiles/OpenGLProject.dir/include/glad.c.o -c /home/didi-desktop/Code/Learn_OpenGL/include/glad.c",
   "file": "/home/didi-desktop/Code/Learn_OpenGL/include/glad.c"
+},
+{
+  "directory": "/home/didi-desktop/Code/Learn_OpenGL/build",
+  "command": "/usr/bin/c++  -I/home/didi-desktop/Code/Learn_OpenGL/include -g -o CMakeFiles/OpenGLProject.dir/src/imageLoad.cpp.o -c /home/didi-desktop/Code/Learn_OpenGL/src/imageLoad.cpp",
+  "file": "/home/didi-desktop/Code/Learn_OpenGL/src/imageLoad.cpp"
 }
 ]
