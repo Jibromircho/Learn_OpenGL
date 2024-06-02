@@ -53,7 +53,11 @@ int main() {
      0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f,   // bottom right
     -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f,   // bottom left
     -0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f    // top left 
-};
+    };
+
+    //vector math stuff
+
+
     
     //texture image coordinates
     float texCoords[] = {
@@ -160,6 +164,17 @@ int main() {
     glUniform1i(glGetUniformLocation(ourShader.ID, "texture1"), 0);
     ourShader.setInt("texture2", 1);
 
+    unsigned int transformLoc = glGetUniformLocation(ourShader.ID, "transform");
+    //top left
+    glm::mat4 trans2 = glm::mat4(1.0f);
+    trans2 = glm::translate(trans2, glm::vec3(-0.5f, 0.5f, 0.0f));
+    //top right
+    glm::mat4 trans3 = glm::mat4(1.0f);
+    trans3 = glm::translate(trans3, glm::vec3(0.5f, 0.5f, 0.0f));
+    //bot left
+    glm::mat4 trans4 = glm::mat4(1.0f);
+    trans4 = glm::translate(trans4, glm::vec3(-0.5f, -0.5f, 0.0f));
+
     // main loop
     while (!glfwWindowShouldClose(window)) {
         // Input handling
@@ -174,13 +189,36 @@ int main() {
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, texture2);
 
+        glm::mat4 trans  = glm::mat4(1.0f);
+        trans = glm::translate(trans, glm::vec3(0.5f, -0.5f, 0.0f));
+        trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(0.0, 0.0, 1.0));
+
+        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans));
         ourShader.setFloat("mixValue", mixValue);
 
         ourShader.use();
         glBindVertexArray(VAO);
-
-
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+
+        glm::mat4 trans2 = glm::mat4(1.0f);
+        trans2 = glm::translate(trans2, glm::vec3(-0.5f, 0.5f, 0.0f));
+        trans2 = glm::rotate(trans2, (float)glfwGetTime(), glm::vec3(1.0, 1.0, 1.0));
+        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans2));
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+
+        glm::mat4 trans3 = glm::mat4(1.0f);
+        trans3 = glm::translate(trans3, glm::vec3(0.5f, 0.5f, 0.0f));
+        trans3 = glm::rotate(trans3, (float)glfwGetTime(), glm::vec3(0.0, 1.0, 0.0));
+        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans3));
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+
+
+        glm::mat4 trans4 = glm::mat4(1.0f);
+        trans4 = glm::translate(trans4, glm::vec3(-0.5f, -0.5f, 0.0f));
+        trans4 = glm::rotate(trans4, (float)glfwGetTime(), glm::vec3(1.0, 0.0, 0.0));
+        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans4));
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+
 
         // Swap buffers
         glfwSwapBuffers(window);
@@ -205,14 +243,13 @@ void processInput(GLFWwindow *window) {
         glfwSetWindowShouldClose(window, true);
 
     if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS){
-        mixValue += 0.001f;
+        mixValue += 0.003f;
         if (mixValue >= 1.0f)
             mixValue = 1.0f;
     }
     if(glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS){
-        mixValue -= 0.001f;
+        mixValue -= 0.003f;
         if (mixValue <= 0.0f)
             mixValue = 0.0f;
     }
-
 }
