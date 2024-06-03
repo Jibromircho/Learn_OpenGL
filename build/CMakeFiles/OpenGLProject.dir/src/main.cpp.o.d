@@ -385,4 +385,6 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: \
  /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/sstream \
  /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/iostream \
  /home/didi-desktop/Code/Learn_OpenGL/include/stb_image.h \
- /usr/include/c++/11/stdlib.h
+ /usr/include/c++/11/stdlib.h \
+ /home/didi-desktop/Code/Learn_OpenGL/include/shader.h \
+ /home/didi-desktop/Code/Learn_OpenGL/include/camera.h

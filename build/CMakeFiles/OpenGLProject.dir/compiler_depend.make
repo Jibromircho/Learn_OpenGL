@@ -625,8 +625,14 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bits/sstream.tcc \
   /usr/include/c++/11/iostream \
   ../include/stb_image.h \
-  /usr/include/c++/11/stdlib.h
+  /usr/include/c++/11/stdlib.h \
+  ../include/shader.h \
+  ../include/camera.h
 
+
+../include/camera.h:
+
+../include/shader.h:
 
 /usr/include/c++/11/sstream:
 
