@@ -1,3 +1,0 @@
-/home/didi-desktop/Code/Learn_OpenGL/build/CMakeFiles/OpenGLProject.dir
-/home/didi-desktop/Code/Learn_OpenGL/build/CMakeFiles/edit_cache.dir
-/home/didi-desktop/Code/Learn_OpenGL/build/CMakeFiles/rebuild_cache.dir
