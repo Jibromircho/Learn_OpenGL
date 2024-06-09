@@ -10,15 +10,12 @@ void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 
 //texture and color settings
-glm::vec3 lightColor(1.0f, 1.0f, 1.0f);
-glm::vec3 toyColor(1.0f, 0.5f, 0.31f);
 glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
 
 //camera initial and move setings
 Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
 float lastX = 600, lastY = 450;
 bool firstMouse = true;
-
 
 float deltaTime = 0.0f;
 float lastFrame = 0.0f;
@@ -59,19 +56,19 @@ int main() {
 
     
     //shader class init here
-    Shader lightShader("src/shaders/lightShader.vs", "src/shaders/lightShader.fs");
-    Shader lightCubeShader("src/shaders/shader.vs", "src/shaders/lightCubeShader.fs");
+    Shader lightShader("../src/shaders/lightShader.vs", "../src/shaders/lightShader.fs");
+    Shader lightCubeShader("../src/shaders/shader.vs", "../src/shaders/lightCubeShader.fs");
     
     //loading img data
 
     //triangle verticies here
     float vertices[] = {
     -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
-     0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f, 
-     0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f, 
-     0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f, 
-    -0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f, 
-    -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f, 
+     0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+     0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+     0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+    -0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+    -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
 
     -0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
      0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
@@ -140,6 +137,8 @@ int main() {
 
     glEnable(GL_DEPTH_TEST);
 
+
+
     // main loop
     while (!glfwWindowShouldClose(window)) {
 
@@ -155,13 +154,26 @@ int main() {
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-
+  
         //lightPos.x = 1.0f + sin(glfwGetTime()) * 2.0f;
         lightShader.use();
-        lightShader.setVec3("objectColor", toyColor);
-        lightShader.setVec3("lightColor", lightColor);
         lightShader.setVec3("lightPos", lightPos);
         lightShader.setVec3("viewPos", camera.Position);
+        //disco light here
+        glm::vec3 lightColor(1.0f);
+        glm::vec3 diffuseColor = lightColor * glm::vec3(0.5f);
+        glm::vec3 ambientColor = diffuseColor * glm::vec3(0.2f);
+
+        lightShader.setVec3("light.ambient", ambientColor);
+        lightShader.setVec3("light.diffuse", diffuseColor);
+        lightShader.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
+
+        lightShader.setVec3("material.ambient", 1.0f, 0.5f, 0.31f);
+        lightShader.setVec3("material.diffuse", 1.0f, 0.5f, 0.31f);
+        lightShader.setVec3("material.specular", 0.5f, 0.5f, 0.5f);
+        lightShader.setFloat("material.shininess", 32.0f);
+
+
 
         glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)1200 / (float)900, 0.1f, 100.0f);
         glm::mat4 view = camera.GetViewMatrix();
@@ -208,10 +220,10 @@ void processInput(GLFWwindow *window) {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
 
-    if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS && glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) != GLFW_PRESS){
+    if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS && glfwGetKey(window, GLFW_KEY_M) != GLFW_PRESS){
         lightPos.y += 0.03f;
     }
-    if(glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS && glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) != GLFW_PRESS){
+    if(glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS && glfwGetKey(window, GLFW_KEY_M) != GLFW_PRESS){
         lightPos.y -= 0.03f;
     }
     if(glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS){
@@ -220,10 +232,10 @@ void processInput(GLFWwindow *window) {
     if(glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS){
         lightPos.x += 0.03f;
     }
-    if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS && glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS){
+    if(glfwGetKey(window, GLFW_KEY_O) == GLFW_PRESS){
         lightPos.z -= 0.03f;
     }
-    if(glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS && glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS){
+    if(glfwGetKey(window, GLFW_KEY_L) == GLFW_PRESS){
         lightPos.z += 0.03f;
     }
 
