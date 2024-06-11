@@ -11,6 +11,20 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 
 //texture and color settings
 glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
+glm::vec3 lightColor(1.0f,1.0f, 1.0f);
+
+
+struct Material{
+    glm::vec3 ambient;
+    glm::vec3 diffuse;
+    glm::vec3 specular;
+    float shininess;
+};
+
+Material emerald;
+Material brass;
+
+
 
 //camera initial and move setings
 Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
@@ -54,10 +68,19 @@ int main() {
     glfwSetCursorPosCallback(window, mouse_callback);
     glfwSetScrollCallback(window, scroll_callback);
 
-    
+    //setting different material settings
+    emerald.ambient = glm::vec3(0.0215f, 0.1745f, 0.0215f);
+    emerald.diffuse = glm::vec3(0.07568f, 0.61424f, 0.07568f);
+    emerald.specular = glm::vec3(0.633f, 0.727811f, 0.633f);
+    emerald.shininess = 0.6f;
+
+    brass.ambient = glm::vec3(0.329412f, 0.223529f, 0.223529f);
+    brass.diffuse = glm::vec3(0.780392f, 0.568627f, 0.113725f);
+    brass.specular = glm::vec3(0.992157f, 0.941176f, 0.807843f);
+    brass.shininess = 0.21794872f;
     //shader class init here
     Shader lightShader("../src/shaders/lightShader.vs", "../src/shaders/lightShader.fs");
-    Shader lightCubeShader("../src/shaders/shader.vs", "../src/shaders/lightCubeShader.fs");
+    Shader lightCubeShader("../src/shaders/lightCubeShader.vs", "../src/shaders/lightCubeShader.fs");
     
     //loading img data
 
@@ -153,25 +176,23 @@ int main() {
         // Rendering commands here
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
   
         //lightPos.x = 1.0f + sin(glfwGetTime()) * 2.0f;
         lightShader.use();
         lightShader.setVec3("lightPos", lightPos);
         lightShader.setVec3("viewPos", camera.Position);
         //disco light here
-        glm::vec3 lightColor(1.0f);
         glm::vec3 diffuseColor = lightColor * glm::vec3(0.5f);
         glm::vec3 ambientColor = diffuseColor * glm::vec3(0.2f);
 
-        lightShader.setVec3("light.ambient", ambientColor);
-        lightShader.setVec3("light.diffuse", diffuseColor);
+        lightShader.setVec3("light.ambient", 1.0f, 1.0f, 1.0f);
+        lightShader.setVec3("light.diffuse", 1.0f, 1.0f, 1.0f);
         lightShader.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
 
-        lightShader.setVec3("material.ambient", 1.0f, 0.5f, 0.31f);
-        lightShader.setVec3("material.diffuse", 1.0f, 0.5f, 0.31f);
-        lightShader.setVec3("material.specular", 0.5f, 0.5f, 0.5f);
-        lightShader.setFloat("material.shininess", 32.0f);
+        lightShader.setVec3("material.ambient", brass.ambient);
+        lightShader.setVec3("material.diffuse", brass.diffuse);
+        lightShader.setVec3("material.specular", brass.specular);
+        lightShader.setFloat("material.shininess", (brass.shininess * 128.0));
 
 
 
@@ -190,6 +211,7 @@ int main() {
         lightCubeShader.use();
         lightCubeShader.setMat4("projection", projection);
         lightCubeShader.setMat4("view", view);
+        lightCubeShader.setVec3("lightColor", lightColor);
         model = glm::mat4(1.0f);
         model = glm::translate(model, lightPos);
         model = glm::scale(model, glm::vec3(0.2f));
