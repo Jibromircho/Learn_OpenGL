@@ -14,8 +14,6 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 set(SOURCES
     src/main.cpp
     include/glad.c
-    src/shaders/shader.vs
-    src/shaders/shader.fs
     src/imageLoad.cpp
     
 )
