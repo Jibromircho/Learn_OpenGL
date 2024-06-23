@@ -162,6 +162,7 @@ int main() {
 
     unsigned int diffuseMap = loadTexture(std::filesystem::path("../img/container2.png").c_str());
     unsigned int specularMap = loadTexture(std::filesystem::path("../img/container2_specular.png").c_str());
+    unsigned int emisionMap = loadTexture(std::filesystem::path("../img/matrix.jpg").c_str());
 
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
@@ -198,6 +199,7 @@ int main() {
 
         lightShader.setInt("material.diffuse", 0);
         lightShader.setInt("material.specular", 1);
+        lightShader.setInt("material.emision", 2);
         lightShader.setFloat("material.shininess", 64.0f);
 
 
@@ -215,6 +217,8 @@ int main() {
         glBindTexture(GL_TEXTURE_2D, diffuseMap);
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, specularMap);
+        glActiveTexture(GL_TEXTURE2);
+        glBindTexture(GL_TEXTURE_2D, emisionMap);
 
         glBindVertexArray(cubeVAO);
         glDrawArrays(GL_TRIANGLES, 0, 36);
